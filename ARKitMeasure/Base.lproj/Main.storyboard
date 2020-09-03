@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" userLabel="ViewController" customClass="ViewController" customModule="AR_Measure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GFR-uS-NNc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huK-F4-n1l">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="M2p-3K-T60"/>
+                                </connections>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session initialized.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUQ-Rn-kyK" userLabel="StatusLabel">
+                                <rect key="frame" x="16" y="20" width="568" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="i2N-dm-fcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xxw-84-5SR" firstAttribute="trailing" secondItem="huK-F4-n1l" secondAttribute="trailing" id="6V9-fn-mI4"/>
+                            <constraint firstItem="huK-F4-n1l" firstAttribute="top" secondItem="xxw-84-5SR" secondAttribute="top" id="AOP-Ir-r7b"/>
+                            <constraint firstItem="bUQ-Rn-kyK" firstAttribute="top" secondItem="xxw-84-5SR" secondAttribute="top" constant="20" id="DJw-Kb-Z2h"/>
+                            <constraint firstItem="xxw-84-5SR" firstAttribute="bottom" secondItem="huK-F4-n1l" secondAttribute="bottom" id="DT4-sV-ork"/>
+                            <constraint firstItem="bUQ-Rn-kyK" firstAttribute="leading" secondItem="xxw-84-5SR" secondAttribute="leading" constant="16" id="HZS-rQ-mBv"/>
+                            <constraint firstItem="huK-F4-n1l" firstAttribute="leading" secondItem="xxw-84-5SR" secondAttribute="leading" id="WiD-da-Uda"/>
+                            <constraint firstItem="xxw-84-5SR" firstAttribute="trailing" secondItem="bUQ-Rn-kyK" secondAttribute="trailing" constant="16" id="YQ2-g5-7G0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xxw-84-5SR"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="huK-F4-n1l" id="VAS-am-YHH"/>
+                        <outlet property="statusLabel" destination="bUQ-Rn-kyK" id="QUK-ZB-mkl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
